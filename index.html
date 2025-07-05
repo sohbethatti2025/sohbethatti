@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güvenli Dertleşme Hattı - Anonim Duygusal Destek</title>
+    <meta name="description" content="Anonim ve güvenli ortamda dertlerinizi paylaşın. 7/24 duygusal destek hattı. Profesyonel ve gizli danışmanlık hizmeti.">
+    <meta name="keywords" content="dertleşme hattı, duygusal destek, anonim sohbet, psikolojik destek, güvenli konuşma">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .phone-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin: 2rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .features {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .page-content {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 15px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .page-content h1 {
+            color: #4a4a4a;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .page-content h2 {
+            color: #666;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        .page-content p {
+            margin-bottom: 1rem;
+        }
+
+        .page-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .phone-number {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">💬 Güvenli Dertleşme</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Ana Sayfa</a></li>
+                <li><a href="#" onclick="showPage('about')">Hakkımızda</a></li>
+                <li><a href="#" onclick="showPage('privacy')">Gizlilik</a></li>
+                <li><a href="#" onclick="showPage('terms')">Kullanım Şartları</a></li>
+                <li><a href="#" onclick="showPage('contact')">İletişim</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Ana Sayfa -->
+        <div id="home" class="page">
+            <section class="hero">
+                <h1>Dertlerinizi Güvenle Paylaşın</h1>
+                <p>Anonim ve güvenli ortamda, 7/24 size dinleyecek birini bulun. Profesyonel duygusal destek hattı.</p>
+                <div class="phone-number">📞 003185800213</div>
+                <p>Telefonunuzdan yukarıdaki numarayı tuşlayın ve hemen güvenli sohbete başlayın</p>
+                <a href="tel:003185800213" class="cta-button">🔒 Güvenli Arama Yap</a>
+            </section>
+
+            <section class="features">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔐</div>
+                        <h3>Tamamen Anonim</h3>
+                        <p>Kimliğiniz gizli kalır. Hiçbir kişisel bilginiz kaydedilmez veya paylaşılmaz.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💭</div>
+                        <h3>Yargısız Dertleşme</h3>
+                        <p>Dertlerinizi, endişelerinizi ve düşüncelerinizi özgürce paylaşın.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌙</div>
+                        <h3>7/24 Hizmet</h3>
+                        <p>Gece gündüz demeden, ihtiyaç duyduğunuz her an yanınızdayız.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💝</div>
+                        <h3>Duygusal Destek</h3>
+                        <p>Profesyonel ve samimi yaklaşımla, kendinizi daha iyi hissetmenize yardımcı oluruz.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Güvenli Ortam</h3>
+                        <p>KVKK uyumlu hizmetimizle verileriniz güvende kalır.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Anında Erişim</h3>
+                        <p>Karmaşık kayıt işlemleri yok. Sadece arayın ve konuşmaya başlayın.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <h2>Kullanıcı Deneyimleri</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Zor bir dönemde kendimi çok yalnız hissediyordum. Bu hizmeti kullandıktan sonra kendimi çok daha iyi hissettim. Gerçekten samimi bir yaklaşım var."</p>
+                        <div class="testimonial-author">- Anonim Kullanıcı</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Yargılanmadan dertlerimi anlatabilmek çok rahatlatıcıydı. Profesyonel yaklaşım ve anlayış için teşekkürler."</p>
+                        <div class="testimonial-author">- Anonim Kullanıcı</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"24 saat erişilebilir olması çok önemli. Gece saatlerinde bile birisiyle konuşabilmek gerçekten değerli."</p>
+                        <div class="testimonial-author">- Anonim Kullanıcı</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Hakkımızda Sayfası -->
+        <div id="about" class="page hidden">
+            <div class="page-content">
+                <h1>Hakkımızda</h1>
+                <p>Güvenli Dertleşme Hattı, 2024 yılında kurulmuş, duygusal destek ve psikolojik rahatlama hizmetleri sunan profesyonel bir platformdur. Amacımız, zorlu yaşam dönemlerinde insanların yanında olmak ve güvenli bir ortamda dertlerini paylaşabilecekleri alan yaratmaktır.</p>
+                
+                <h2>Misyonumuz</h2>
+                <p>Toplumun her kesiminden insanlara, yargılanmadan ve güvenli bir ortamda duygusal destek sağlamak. Herkesin konuşma ve dinlenme hakkı olduğuna inanıyoruz.</p>
+                
+                <h2>Vizyonumuz</h2>
+                <p>Türkiye'nin en güvenilir ve erişilebilir duygusal destek platformu olmak. Mental sağlığın önemini vurgulayarak, toplumsal farkındalık yaratmak.</p>
+                
+                <h2>Değerlerimiz</h2>
+                <ul>
+                    <li><strong>Gizlilik:</strong> Tüm konuşmalarınız tamamen gizli tutulur</li>
+                    <li><strong>Güvenlik:</strong> Verileriniz en yüksek güvenlik standartlarıyla korunur</li>
+                    <li><strong>Profesyonellik:</strong> Deneyimli ve eğitimli personel ile hizmet</li>
+                    <li><strong>Erişilebilirlik:</strong> 7/24 kesintisiz hizmet</li>
+                    <li><strong>Anlayış:</strong> Yargısız ve empatik yaklaşım</li>
+                </ul>
+                
+                <h2>Hizmet Standartlarımız</h2>
+                <p>KVKK (Kişisel Verilerin Korunması Kanunu) uyumlu olarak çalışıyoruz. Tüm görüşmeler gizli tutulur ve hiçbir kişisel bilgi üçüncü taraflarla paylaşılmaz.</p>
+            </div>
+        </div>
+
+        <!-- Gizlilik Politikası -->
+        <div id="privacy" class="page hidden">
+            <div class="page-content">
+                <h1>Gizlilik Politikası</h1>
+                <p><strong>Son Güncelleme:</strong> 05.07.2025</p>
+                
+                <h2>1. Genel Bilgiler</h2>
+                <p>Bu Gizlilik Politikası, Güvenli Dertleşme Hattı hizmetlerini kullanırken kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
+                
+                <h2>2. Toplanan Bilgiler</h2>
+                <p>Hizmetimizi kullanırken aşağıdaki bilgiler toplanabilir:</p>
+                <ul>
+                    <li>Telefon numarası (yalnızca arama kaydı için)</li>
+                    <li>Arama süreleri ve tarihleri</li>
+                    <li>Hizmet kalitesi için gerekli teknik bilgiler</li>
+                </ul>
+                
+                <h2>3. Bilgilerin Kullanımı</h2>
+                <p>Toplanan bilgiler şu amaçlarla kullanılır:</p>
+                <ul>
+                    <li>Hizmet kalitesini artırmak</li>
+                    <li>Teknik destek sağlamak</li>
+                    <li>Yasal yükümlülükleri yerine getirmek</li>
+                    <li>Hizmet istatistikleri oluşturmak</li>
+                </ul>
+                
+                <h2>4. Bilgilerin Korunması</h2>
+                <p>Kişisel verileriniz:</p>
+                <ul>
+                    <li>Güvenli sunucularda saklanır</li>
+                    <li>Şifreleme teknolojileri ile korunur</li>
+                    <li>Sadece yetkili personel tarafından erişilebilir</li>
+                    <li>Yasal süre sonunda imha edilir</li>
+                </ul>
+                
+                <h2>5. Çerezler</h2>
+                <p>Web sitemizde kullanıcı deneyimini iyileştirmek için çerezler kullanılabilir. Çerezleri tarayıcı ayarlarınızdan kontrol edebilirsiniz.</p>
+                
+                <h2>6. Üçüncü Taraf Paylaşımı</h2>
+                <p>Kişisel verileriniz, yasal zorunluluklar dışında hiçbir üçüncü tarafla paylaşılmaz.</p>
+                
+                <h2>7. Haklarınız</h2>
+                <p>KVKK kapsamında sahip olduğunuz haklar:</p>
+                <ul>
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>Kişisel verilerinizin düzeltilmesini talep etme</li>
+                    <li>Kişisel verilerinizin silinmesini talep etme</li>
+                    <li>İşleme itiraz etme</li>
+                </ul>
+                
+                <h2>8. İletişim</h2>
+                <p>Gizlilik ile ilgili sorularınız için: <a href="mailto:info@guvenlisohbet.com">info@guvenlisohbet.com</a></p>
+            </div>
+        </div>
+
+        <!-- Kullanım Şartları -->
+        <div id="terms" class="page hidden">
+            <div class="page-content">
+                <h1>Kullanım Şartları</h1>
+                <p><strong>Son Güncelleme:</strong> 05.07.2025</p>
+                
+                <h2>1. Hizmet Tanımı</h2>
+                <p>Güvenli Dertleşme Hattı, duygusal destek ve psikolojik rahatlama amacıyla telefon üzerinden sohbet hizmeti sunar.</p>
+                
+                <h2>2. Kullanım Koşulları</h2>
+                <ul>
+                    <li>Hizmet 18 yaş üstü kullanıcılar içindir</li>
+                    <li>Nezaket kurallarına uyulması zorunludur</li>
+                    <li>Kaba dil ve hakaret yasaktır</li>
+                    <li>Tehdit ve taciz kesinlikle kabul edilmez</li>
+                </ul>
+                
+                <h2>3. Hizmet Sınırları</h2>
+                <p>Bu hizmet:</p>
+                <ul>
+                    <li>Profesyonel terapinin yerine geçmez</li>
+                    <li>Acil durumlarda 112'yi arayın</li>
+                    <li>Tıbbi tavsiye vermez</li>
+                    <li>Hukuki danışmanlık sağlamaz</li>
+                </ul>
+                
+                <h2>4. Ücretlendirme</h2>
+                <p>Arama ücretleri operatörünüze göre değişir. Ek ücret talep edilmez.</p>
+                
+                <h2>5. Gizlilik</h2>
+                <p>Tüm konuşmalar gizli tutulur. Yasal zorunluluklar dışında paylaşılmaz.</p>
+                
+                <h2>6. Sorumluluk</h2>
+                <p>Hizmet "olduğu gibi" sunulur. Kullanıcılar hizmeti kendi sorumluluğunda kullanır.</p>
+                
+                <h2>7. Hizmet Reddi</h2>
+                <p>Aşağıdaki durumlarda hizmet reddedilebilir:</p>
+                <ul>
+                    <li>Kurallara uyulmaması</li>
+                    <li>Hakaret ve tehdit</li>
+                    <li>Uygunsuz içerik</li>
+                    <li>Teknik problemler</li>
+                </ul>
+                
+                <h2>8. Değişiklikler</h2>
+                <p>Bu şartlar önceden bildirimde bulunularak değiştirilebilir.</p>
+                
+                <h2>9. İletişim</h2>
+                <p>Sorularınız için: <a href="mailto:info@guvenlisohbet.com">info@guvenlisohbet.com</a></p>
+            </div>
+        </div>
+
+        <!-- İletişim Sayfası -->
+        <div id="contact" class="page hidden">
+            <div class="page-content">
+                <h1>İletişim</h1>
+                
+                <h2>📞 Duygusal Destek Hattı</h2>
+                <p style="font-size: 1.5rem; color: #667eea; font-weight: bold;">003185800213</p>
+                <p>7/24 kesintisiz hizmet</p>
+                
+                <h2>📧 E-posta</h2>
+                <p>Genel sorular: <a href="mailto:info@guvenlisohbet.com">info@guvenlisohbet.com</a></p>
+                <p>Teknik destek: <a href="mailto:destek@guvenlisohbet.com">destek@guvenlisohbet.com</a></p>
+                <p>Gizlilik sorular: <a href="mailto:gizlilik@guvenlisohbet.com">gizlilik@guvenlisohbet.com</a></p>
+                
+                <h2>🏢 Hizmet Bilgileri</h2>
+                <p><strong>Şirket:</strong> Güvenli Dertleşme Hizmetleri</p>
+                <p><strong>Kuruluş:</strong> 2024</p>
+                <p><strong>Hizmet Alanı:</strong> Türkiye</p>
+                <p><strong>Dil:</strong> Türkçe</p>
+                
+                <h2>⏰ Hizmet Saatleri</h2>
+                <p>Duygusal destek hattımız 24 saat, 7 gün hizmet vermektedir.</p>
+                <ul>
+                    <li>Pazartesi - Pazar: 00:00 - 23:59</li>
+                    <li>Resmi tatiller dahil</li>
+                    <li>Kesintisiz hizmet</li>
+                </ul>
+                
+                <h2>📋 Sıkça Sorulan Sorular</h2>
+                <p><strong>S: Konuşmalarım gizli mi?</strong><br>
+                C: Evet, tüm konuşmalarınız tamamen gizli tutulur.</p>
+                
+                <p><strong>S: Ücret ne kadar?</strong><br>
+                C: Sadece operatörünüzün arama ücretini ödersiniz.</p>
+                
+                <p><strong>S: Kaç yaşında olmalıyım?</strong><br>
+                C: Hizmetimiz 18 yaş üstü kullanıcılar içindir.</p>
+                
+                <h2>🔐 Güvenlik</h2>
+                <p>Verileriniz SSL şifreleme ile korunur. KVKK uyumlu hizmet sunuyoruz.</p>
+                
+                <h2>📝 Şikayet ve Öneriler</h2>
+                <p>Hizmet kalitemizi artırmak için görüş ve önerilerinizi bekliyoruz:</p>
+                <p>E-posta: <a href="mailto:geri-bildirim@guvenlisohbet.com">geri-bildirim@guvenlisohbet.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hizmetlerimiz</h3>
+                    <a href="#" onclick="showPage('home')">Duygusal Destek</a>
+                    <a href="#" onclick="showPage('home')">Anonim Dertleşme</a>
+                    <a href="#" onclick="showPage('home')">7/24 Hizmet</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Kurumsal</h3>
+                    <a href="#" onclick="showPage('about')">Hakkımızda</a>
+                    <a href="#" onclick="showPage('privacy')">Gizlilik Politikası</a>
+                    <a href="#" onclick="showPage('terms')">Kullanım Şartları</a>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <a href="tel:003185800213">📞 003185800213</a>
+                    <a href="mailto:info@guvenlisohbet.com">📧 info@guvenlisohbet.com</a>
+                    <a href="#" onclick="showPage('contact')">İletişim Sayfası</a>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; margin-top: 2rem;">
+                <p>&copy; 2024 Güvenli Dertleşme Hattı. Tüm hakları saklıdır.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                    KVKK uyumlu hizmet • Güvenli ve gizli • 7/24 destek
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Tüm sayfaları gizle
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.add('hidden'));
+            
+            // Seçilen sayfayı göster
+            document.getElementById(pageId).classList.remove('hidden');
+            
+            // Sayfanın üstüne scroll et
+            window.scrollTo(0, 0);
+        }
+
+        // Mobil menü (gelecekte genişletilebilir)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            // Mobil menü açma/kapama mantığı buraya eklenebilir
+            alert('Mobil menü: Sayfalar arası geçiş için linkleri kullanın');
+        });
+
+        // Smooth scroll için
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
